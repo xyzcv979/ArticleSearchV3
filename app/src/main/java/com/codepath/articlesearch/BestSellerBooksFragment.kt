@@ -23,6 +23,7 @@ import org.json.JSONObject
 // CHANGE THIS TO BE YOUR API KEY  //
 // --------------------------------//
 private const val API_KEY = BuildConfig.API_KEY
+
 /*
  * The class for the only fragment in the app, which contains the progress bar,
  * recyclerView, and performs the network calls to the NY Times API.
@@ -56,7 +57,6 @@ class BestSellerBooksFragment : Fragment(), OnListFragmentInteractionListener {
         val client = AsyncHttpClient()
         val params = RequestParams()
         params["api-key"] = API_KEY
-
         // Using the client, perform the HTTP request
         client[
                 "https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json",
